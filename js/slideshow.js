@@ -15,7 +15,7 @@ function currentSlide(n) {
 function showSlides(n) {
     slides = document.querySelectorAll('.slideshow-image'); 
     console.log(slides);
-    dots = document.querySelectorAll('.Dot');
+    dots = document.querySelectorAll('.slideshow-image-bottom-image');
 
     // document.querySelector('.image-slide').innerHTML = test;
     if (n > slides.length) {numSlides=1}

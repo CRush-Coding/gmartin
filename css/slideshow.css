@@ -1,6 +1,43 @@
+.intro-image-initial-container {
+    margin-top: 150px;
+    /* top: 150px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    /* flex-direction: row; */
+    /* top: 150px; */
+    /* top: 200px; */
+    /* margin: 0; */
+    /* position: absolute; */
+    margin: 0 50px 0 50px;
+    max-width: 2100px;
+    max-height: 1200px;
+    /* height: 800px; */
+    /* height: 100%; */
+    align-items: center;
+    justify-content: end;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    /* border: 2px solid black; */
+}
+
 .slideshow-image {
     width: 100%;
     display: none;
+    overflow: hidden;
+    object-fit: cover;
+    z-index: 300;
+}
+
+.slideshow-image-bottom-image {
+    opacity: 0.5;
+    width: 100%;
     overflow: hidden;
     object-fit: cover;
     z-index: 300;
@@ -39,6 +76,7 @@
 }
 
 .Dot {
+    display: flex;
     cursor: pointer;
     height: 20px;
     width: 20px;
@@ -46,6 +84,18 @@
     background-color: black;
     border-radius: 50%;
     display: inline-block;
+    /* border: 1px solid black; */
+}
+
+.slideshow-image-preview {
+    display: inline-block;
+    flex: 1;
+    max-width: 150px;
+    height: 90px;
+    margin: 10px;
+    /* border: 1px solid black; */
+    cursor: pointer;
+    align-items: center;
 }
 
 .Dot:hover {
@@ -53,15 +103,27 @@
 }
 
 @keyframes fade {
-    from {opacity: .2;}
+    from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes fadeInImage {
+    0% {opacity: 0;}
+
+    100% {opacity: 1;}
+}
+
+.gallery-fade {
+    animation: fadeInImage ease 3s;
+    animation-iteration-count: 1;
 }
 
 .dot-container {
     display: flex;
+    margin-top: 10px;
     left: 500px;
     right: 500px;
-    height: 50px;
+    max-height: 80px;
     /* border: 1px solid black; */
     /* margin: 0; */
     align-items: center;
@@ -70,9 +132,10 @@
 }
 
 .dot-inner-container {
+    flex: 1;
     display: flex;
     /* position: absolute; */
-    width: 300px;
+    max-width: 700px;
     /* left: 200px;
     right: 200px; */
     height: 100%;
@@ -82,7 +145,7 @@
 }
 
 .active {
-    background-color: gray;
+    opacity: 1;
 }
 
 .fade {
@@ -90,3 +153,49 @@
     animation-duration: 1s;
 }
 
+.text-container {
+    display: flex;
+    position: absolute;
+    right: 0;
+    max-height: 500px;
+    max-width: 600px;
+    background-color: lightgray;
+    /* border: 1px solid black; */
+    z-index: 400;
+    overflow: hidden;
+}
+
+@media (max-width: 1500px) {
+    .text-container {
+        max-height: 300px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-container {
+        max-height: 200px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .text-container {
+        max-height: 150px;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 550px) {
+    .text-container {
+        max-height: 150px;
+        max-width: 100px;
+        margin: 0 15px 0 15px;
+    }
+
+    .image-container {
+        margin: 0 15px 0 15px;
+    }
+
+    /* .dot-inner-container {} */
+}

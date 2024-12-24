@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/aboutme.css">
+    <link rel="stylesheet" href="css/bottomsection.css">
     <title>GMARTIN about me</title>
 </head>
 <body>
     <div class="header-container">
-        <div class="header-name">
-            Gillian Martin Ceramics
+        <div class="header-name-box">
+            <div class="header-name-container">
+                Gillian Martin Ceramics
+            </div>
+            
         </div>
         <div class="header-icons">
             <a class="header-icon-button" href="Home_page.html">
@@ -32,15 +36,32 @@
                 Contact
             </div>
             <div class="header-icon-button">
-                <img src="images/instagram-logo-svgrepo-com.svg">
+                <a href="https://www.instagram.com/gmartin.ceramics/" target="_blank">
+                    <img src="images/instagram-logo-svgrepo-com.svg">
+                </a>
             </div>
 
+        </div>
+        <div class="header-hamburger-container">
+            <a href="https://www.instagram.com/gmartin.ceramics/" target="_blank">
+                <img src="images/instagram-logo-svgrepo-com.svg">
+            </a>
+            <svg class="hamburger-button"
+            onclick="dropDown()"
+            xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            
         </div>
 
     </div>
 
     <div class="gallery-banner">
+        <img class="banner-image" src="pottery_images/bannernew.jpg">
         <div class="gallery-banner-text">
+            About Me
 
         </div>
 
@@ -67,7 +88,7 @@
         </div>
 
         <div class="about-me-image">
-            <img class="about-me-image-class" src="images/received_826158271258228.jpeg">
+            <img class="about-me-image-class" src="pottery_images/profile.webp">
 
         </div>
 
@@ -79,20 +100,25 @@
 
     <div class="bottom-section">
         <div class="bottom-name">
-
+            <a style="margin-right: 20px;" class="no-a" href="about_me.html">About</a>
+            <a class="no-a" href="gallery.html">Gallery</a>
+            <a style="margin-left: 20px;" class="no-a" href="events.html">Events</a>
+        
         </div>
         <div class="bottom-mid">
+            <img src="images/instagram-logo-svgrepo-com.svg">
+            
 
         </div>
         <div class="bottom-right">
+            Gillian Martin Ceramics
 
         </div>
     </div>
 
-
     <script src="js/slideshow.js">
-
     </script>
+    <script src="js/basic.js"></script>
     
 </body>
 </html>
