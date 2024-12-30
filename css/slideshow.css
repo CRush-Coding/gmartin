@@ -14,10 +14,10 @@
     /* top: 150px; */
     /* top: 200px; */
     /* margin: 0; */
-    /* position: absolute; */
+    position: relative;
     margin: 0 50px 0 50px;
-    max-width: 2100px;
-    max-height: 1200px;
+    max-width: 1900px;
+    max-height: 1000px;
     /* height: 800px; */
     /* height: 100%; */
     align-items: center;
@@ -45,12 +45,12 @@
 
 .previous {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 40px;
     padding: 16px;
-    margin-top: -12px;
+    margin-top: 25%;
     width: auto;
     position: absolute;
-    color: white;
+    color: black;
     top: 0;
     left: 0;
     border-radius: 0 3px 3px 0;
@@ -61,12 +61,12 @@
 
 .next {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 40px;
     padding: 16px;
-    margin-top: -12px;
+    margin-top: 25%;
     width: auto;
     position: absolute;
-    color: white;
+    color: black;
     top: 0;
     right: 0;
     border-radius: 0 3px 3px 0;
@@ -176,6 +176,14 @@
     .text-container {
         max-height: 200px;
         max-width: 300px;
+    }
+
+    .previous {
+        font-size: 20px;
+    }
+
+    .next {
+        font-size: 20px;
     }
 }
 
